@@ -43,7 +43,7 @@ public class BabyDao {
             PreparedStatement ps = con.prepareStatement("delete from babyname where id=?");
             ps.setInt(1, id);
             status = ps.executeUpdate();
-            con.close();
+            con.close()
         } catch (Exception e) {
             System.out.println(e);
         }
