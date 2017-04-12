@@ -40,12 +40,14 @@ public class DBJUnitTest {
         baby.setReligion("Muslims");
         baby.setSex("Male");
         baby.setMeaning("OFFFFF");
-        BabyDao.save(baby);
+        int value  = BabyDao.save(baby);
+        assertEquals(1, value);
     }
 
     @Test
     public void deleteBaby() {
-        BabyDao.delete(1);
+        int value=BabyDao.delete(8);
+        assertEquals(1, value);
     }
 
     @Test
